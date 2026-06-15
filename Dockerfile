@@ -11,7 +11,8 @@ RUN npm ci
 
 COPY . .
 RUN sed -i 's/\r$//' /app/docker/expo-entrypoint.sh
+RUN cp /app/docker/expo-entrypoint.sh /usr/local/bin/expo-entrypoint.sh
 
 EXPOSE 8081 19000 19001 19002
 
-CMD ["sh", "/app/docker/expo-entrypoint.sh"]
+CMD ["sh", "/usr/local/bin/expo-entrypoint.sh"]
