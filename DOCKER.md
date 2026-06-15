@@ -32,7 +32,6 @@ O celular e o computador precisam estar na mesma rede. O Expo inicia em modo LAN
 Ao executar o Compose em primeiro plano, o log do servico `app` mostra:
 
 - o QR Code para abrir no Expo Go;
-- o link do navegador em `http://localhost:8081`;
 - o endereco da API usado pelo app.
 
 ```bash
@@ -87,7 +86,7 @@ docker compose --env-file .env.docker down -v
 
 - API: `http://localhost:3333`;
 - Healthcheck da API: `http://localhost:3333/health`;
-- Expo/Metro e navegador: `http://localhost:8081`;
+- Expo/Metro: `http://localhost:8081`;
 - PostgreSQL: `localhost:5433`.
 
 O schema do PostgreSQL e criado na inicializacao do volume e a API tambem executa a migration antes de iniciar.

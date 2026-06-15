@@ -20,7 +20,6 @@ if [ "$EXPO_HOST" = "lan" ]; then
 fi
 
 echo "Expo Go: o QR Code sera exibido abaixo pelo Expo."
-echo "Navegador: http://localhost:${EXPO_PORT}"
 if [ "$EXPO_HOST" = "lan" ]; then
   echo "Expo LAN: exp://${HOST_IP}:${EXPO_PORT}"
 else
@@ -29,4 +28,4 @@ fi
 echo "API: ${EXPO_PUBLIC_API_URL}"
 echo "Iniciando Metro em modo ${EXPO_HOST}."
 
-exec npx expo start --host "$EXPO_HOST" --port "$EXPO_PORT" --web --clear
+exec npx expo start --host "$EXPO_HOST" --port "$EXPO_PORT" --clear
