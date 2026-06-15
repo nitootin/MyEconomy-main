@@ -13,4 +13,6 @@ COPY . .
 
 EXPOSE 8081 19000 19001 19002
 
+RUN sed -i 's/\r//' /app/docker/expo-entrypoint.sh && chmod +x /app/docker/expo-entrypoint.sh
+
 CMD ["sh", "/app/docker/expo-entrypoint.sh"]
