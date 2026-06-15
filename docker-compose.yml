@@ -72,9 +72,16 @@ services:
       WATCHPACK_POLLING: "true"
     ports:
       - "${EXPO_PORT:-8081}:${EXPO_PORT:-8081}"
-      - "19000:19000"
-      - "19001:19001"
-      - "19002:19002"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "wget -qO- http://localhost:${EXPO_PORT:-8081}/status | grep -q 'packager-status:running'",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
     depends_on:
       api:
         condition: service_healthy
