@@ -6,7 +6,7 @@ EXPO_HOST="${EXPO_HOST:-lan}"
 HOST_IP="${REACT_NATIVE_PACKAGER_HOSTNAME:-auto}"
 
 if [ "$EXPO_HOST" = "lan" ] && [ "$HOST_IP" = "auto" ]; then
-  HOST_IP="$(ip route get 1.1.1.1 | awk '{ for (i = 1; i <= NF; i++) if ($i == "src") { print $(i + 1); exit } }')"
+  HOST_IP="10.0.2.2"
 fi
 
 if [ "$EXPO_HOST" = "lan" ] && [ -z "$HOST_IP" ]; then

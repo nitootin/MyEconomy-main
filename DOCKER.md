@@ -18,7 +18,7 @@ Troque o valor de `JWT_SECRET` por uma chave longa.
 
 ## Expo Go e navegador
 
-Para Android Emulator, o Docker usa `10.0.2.2`, que e o endereco padrao do emulador para acessar o host Windows:
+Para Android Emulator, o Docker usa `10.0.2.2`, que e o endereco padrao do emulador para acessar o host Windows. Se `REACT_NATIVE_PACKAGER_HOSTNAME` estiver como `auto`, o entrypoint tambem usa `10.0.2.2` para evitar anunciar o IP interno do container Docker:
 
 ```env
 EXPO_PUBLIC_API_URL=auto
