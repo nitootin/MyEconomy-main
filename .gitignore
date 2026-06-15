@@ -12,7 +12,3 @@ yarn-error.log*
 *.orig.*
 web-build/
 
-server/.env
-.env
-
-.env.docker
