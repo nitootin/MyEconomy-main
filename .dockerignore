@@ -1,0 +1,12 @@
+.git
+.gitignore
+.expo
+.env
+.env.docker
+node_modules
+server
+dist
+web-build
+npm-debug.log*
+Dockerfile*
+README.md
